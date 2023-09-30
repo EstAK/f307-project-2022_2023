@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>259</x>
+      <y>602</y>
+      <w>189</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>FreeMultiChoiceCardController
+--
+-listener: Listener
+
+--
++setListener(Listener:listener): void
++onValidateChoiceClicked(String:choice): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>882</x>
+      <y>112</y>
+      <w>189</w>
+      <h>161</h>
+    </coordinates>
+    <panel_attributes>ScoreController
+--
+-timeTaken:long
+-scoreGame:int
+-main:Main
+-deckName:String
+-stage:Stage
+-listener:ScreenChanger
+-SCORE_NUL: int
+--
++show():void
++getScore():int
++getRecord():int
++getTime():long
++onExit():void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1155</x>
+      <y>147</y>
+      <w>210</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>StudyController
+--
+-stage: Stage
+-randomCardPicker: CardPicker
+-screenChanger: ScreenChanger
+--
++visit(HoleCard:holeCard): void
++visit(MultiChoiceCard:multiChoiceCard): void
++visit(StandardCard: standardCard)
++show(): void
++pickNextCard(): void
++onExit(): void
++onGoNext(): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>882</x>
+      <y>7</y>
+      <w>308</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>/Controller/
+--
+
+--
++runAsMainThread(Runnable:runnable): void
+/+show(): void/
+#&lt;T&gt;loadFXMLView(T:viewController, String:fxml, Stage:stage) : void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>343</x>
+      <y>553</y>
+      <w>21</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1015</x>
+      <y>70</y>
+      <w>245</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;330.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>945</x>
+      <y>70</y>
+      <w>21</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1253</x>
+      <y>0</y>
+      <w>203</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+CardVisitor 
+--
+
+--
++visit(HoleCard:holeCard):void
++visit(MultiChoiceCard:multiChoiceCard):void
++visit(StandardCard:standardCard):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1239</x>
+      <y>77</y>
+      <w>112</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>140.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>259</x>
+      <y>329</y>
+      <w>217</w>
+      <h>231</h>
+    </coordinates>
+    <panel_attributes>MultiChoiceCardController
+--
+private final MultiChoiceCard card;
+private final Stage stage;
+private MultiChoiceCardView view;
+-difficultyRewardForSuccess:int
+-difficultyPenaltyForFailure:int
+-REWARD_LOW: int
+-REWARD_MIDDLE: int
+-REWARD_HIGH: int
+--
++show():void
++increaseLocalScore():void
++onFlipCardClicked(): void
++getQuestionSideText(): String
++getAnswerSideText(): String
++onValidateChoiceClicked(String choice): void
++onTwoChoicesClicked(): void
++onFourChoicesClicked(): void
++onDirectAnswerClicked(): void
++onGoNextClicked(): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>350</x>
+      <y>273</y>
+      <w>189</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>250.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>427</x>
+      <y>119</y>
+      <w>336</w>
+      <h>161</h>
+    </coordinates>
+    <panel_attributes>/CardController/
+--
+-lecteurTexte: LecteurTexte
+#listener: Listener
+-isQuestionSide: boolean
+-cardView: CardView
+--
++setCardView(CardView:cardView): void
++setListener(Listener:listener): void
++onExitClicked(): void
++setCardSide(boolean:isQuestionSide): void
++onFlipCardClicked(): void
++onTextToSpeechClicked(String:text): void
+/#getQuestionSideText(): String/
+/#getAnswerSideText(): String/
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>574</x>
+      <y>70</y>
+      <w>378</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>520.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>42</x>
+      <y>161</y>
+      <w>91</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+Listener
+--
+
+--
++onExit: void
++onGoNext: void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>126</x>
+      <y>175</y>
+      <w>315</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+is the listener of &gt;</panel_attributes>
+    <additional_attributes>430.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>609</y>
+      <w>182</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+Listener
+--
+
+--
++onValidateChoice(String:answer): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>175</x>
+      <y>630</y>
+      <w>98</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+is the listener of &gt;</panel_attributes>
+    <additional_attributes>120.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>70</x>
+      <y>224</y>
+      <w>28</w>
+      <h>399</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>20.0;10.0;10.0;550.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>490</x>
+      <y>329</y>
+      <w>210</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>HoleCardController
+--
+-Stage stage;
+-HoleCard card;
+-HoleCardView view;
+--
++show():void
++getQuestionSideText(): String
++getAnswerSideText(): String
++onValidateAnswerClicked(String:answer): void
++onGoNextClicked(): void
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>588</x>
+      <y>273</y>
+      <w>21</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>707</x>
+      <y>329</y>
+      <w>224</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>StandardCardController
+--
+-APPRECIATIONS: List&lt;String&gt;
+-stage: Stage
+-standardCard: StandardCard
+-view: StandardCardView
+--
++show(): void
++onFlipCardClicked(): void
++getQuestionSideText(): String
++getAnswerSideText(): String
++onAppreciationClicked(String:appreciation): void
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>623</x>
+      <y>273</y>
+      <w>175</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;230.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1155</x>
+      <y>371</y>
+      <w>210</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>FreeStudyController
+--
+-stage Stage
+-cardPicker FreeCardPicker
+-card MultiChoiceCard
+--
++show(): void
++visit(HoleCard:holeCard): void
++visit(MultiChoiceCard:multiChoiceCard): void
++visit(StandardCard:standardCard): void
++pickNextCard(): void
++onValidateChoice(String:answer): void
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1246</x>
+      <y>294</y>
+      <w>21</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+</diagram>

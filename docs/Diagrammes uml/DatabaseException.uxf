@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>680</x>
+      <y>50</y>
+      <w>370</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>DatabaseException
+--
+-type:DatabaseExceptionType ;
+-localDateTime:LocalDateTime ;
+-message:String;
+--
++printHint():void
++getHintMessage():String
++LocalDateTime getLocalDateTime():void
++getType():DatabaseExceptionType</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>460</x>
+      <y>350</y>
+      <w>170</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>CardException
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>740</x>
+      <y>350</y>
+      <w>170</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>DeckCardException
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1050</x>
+      <y>310</y>
+      <w>190</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>DeckException</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>560</x>
+      <y>470</y>
+      <w>190</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>RankingException</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>930</x>
+      <y>470</y>
+      <w>190</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>UserException</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>530</x>
+      <y>190</y>
+      <w>320</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>300.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>790</x>
+      <y>190</y>
+      <w>70</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>50.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>830</x>
+      <y>190</y>
+      <w>310</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;290.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>640</x>
+      <y>190</y>
+      <w>210</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>190.0;10.0;10.0;280.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>830</x>
+      <y>190</y>
+      <w>210</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;190.0;280.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>40</y>
+      <w>450</w>
+      <h>680</h>
+    </coordinates>
+    <panel_attributes>Database
+--
+-dbUser:DatabaseUser 
+-dbCard:DatabaseCard
+-dbDeck:DatabaseDeck
+-dbDeckCard:DatabaseDeckCard
+-dbRanking:DatabaseRanking
+-serverMode:boolean
+--
++getInstance(): Database
++setServerMode(boolean:value): void
+-setDataBase(): void
++insertNewUser(String:nickname, String:password): void
++userExists(String:nickname): void
++deleteUser(String:nickname):void
++modifyUserPassword(String:nickname, String:newPassword):void
++getUser(String:nickname):User
++insertNewCard(Card:card):void
++getCard(String:cardTitle):Card
++existCard(String:title):void
++deleteCard(String:title):void
++updateCard(Card:card):void
++insertNewDeck(Deck:deck):void
++getDeck(String:deckName):Deck
++existsDeck(String:deckName):void
++changeDeckTags(String:deckName, String:newFormattedTags):void
++changeDeckName(String:oldDeckName, String:newDeckName):void
++removeCardFromDeck(String:deckName, String:cardName):void
++insertCardIntoDeck(String:cardName, String:deckName):void
++removeDeck(String:deckToRemove):void
++getAllCardsFromDeck(String:deckName): List&lt;Card&gt; 
++getAllDecks(): List&lt;Deck&gt; 
++isLoginValid(User:user):boolean
++updateAuthor(String:deckName, String:author):void
++updateDeckDescription(String:deckName, String description):void
++getAuthorFromDeck(String:deckName):String
++getDescriptionFromDeck(String:deckName):String
++getScoreFromRanking(String:deckTitle, String username):int
++updateRankingScore(String:deckTitle, String:username, int score):void
++deleteScoreFromRanking(String:deckTitle, String:username):void
++getRankingForDeck(String:deck):List&lt;RankRow&gt; 
++updateCardScore(String:cardTitle, int:score):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>440</x>
+      <y>90</y>
+      <w>260</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1= 1
+m2=1..n
+uses &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;240.0;20.0</additional_attributes>
+  </element>
+</diagram>

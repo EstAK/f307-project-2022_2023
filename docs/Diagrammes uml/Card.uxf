@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>420</x>
+      <y>10</y>
+      <w>320</w>
+      <h>450</h>
+    </coordinates>
+    <panel_attributes>/Card/
+--
+-answer:String
+-question:String
+-title:String
+-score:int
+-type:CardType
+-coolDown:int
+-nbrPicked:int
+--
++getTitle():String
++setTitle(String:title):void
++getQuestion():String
+/+getUnformattedQuestion():String/
++setQuestion(String:question):void
++getScore():int
++setScore(int:score):void
++getFormattedAnswer():String
++getUnFormattedAnswer():String
++setAnswer(String:answer):void
++getCoolDown():int
++setCoolDown(int:coolDown):void
++getNbrPicked():int
++setNbrPicked(int:nbrPicked):void
+/+equals(Object:object):boolean/
++toString():String
++getType():CardType
++setType(CardType:type):void
+/+accept(CardVisitor:cardVisitor):void/
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>710</x>
+      <y>570</y>
+      <w>320</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>HoleCard
+--
+-holeQuestion:String
+-hole:String
+--
++putHolesIntoQuestion():void
++getQuestion():String
++getUnformattedQuestion():String
++equals(Object:object):boolean
++accept(CardVisitor:cardVisitor):void
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>620</x>
+      <y>450</y>
+      <w>270</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;250.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>510</y>
+      <w>320</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>MultiChoiceCard
+--
+-fake1:String
+-fake2:String
+-fake3:String
+--
++getFake1():String
++setFake1(String:fake1):void
++getFake2():String
++setFake2(String:fake2):void
++getFake3():String
++setFake2(String:fake3):void
++getUnformattedQuestion():String
++getFormattedAnswer():String
++getUnFormattedAnswer():String
++equals(Object:object):boolean
++accept(CardVisitor:cardVisitor):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>170</x>
+      <y>450</y>
+      <w>330</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>310.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>370</x>
+      <y>600</y>
+      <w>320</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>StandardCard
+--
+--
++getUnformattedQuestion():String
++equals(Object:object):boolean
++accept(CardVisitor:cardVisitor):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>530</x>
+      <y>450</y>
+      <w>30</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+</diagram>

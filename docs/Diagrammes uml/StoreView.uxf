@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>0</y>
+      <w>370</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>DownloadDeckView   
+--
+
+-descriptionBox:TextArea 
+-listCard:ListView&lt;String&gt; 
+-listDeck:ListView&lt;String&gt;
+-nameAuthor:Label 
+-listener:Listener
+--
+-backClicked(ActionEvent:event):void
+-downloadButtonClicked(ActionEvent:event):void
++initialize(URL:url, ResourceBundle:resourceBundle):void
++updateDeckList(List&lt;String&gt;:deckNames):void
++setListener(Listener:listener):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>560</x>
+      <y>50</y>
+      <w>320</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+Listener
+--
+
+--
+-goBack():void
+-downloadDeck(String:deckName):void
+-getCardTitles(String:deckName):List&lt;String&gt;
+-getAuthorFromDeck(String:deckName):String 
+-getDeckDescription(String:deckName):String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>390</x>
+      <y>110</y>
+      <w>190</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+has the listener &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>270</y>
+      <w>370</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>LeaderBoardView    
+--
+
+-leaderBoardTable:TableView&lt;RankRow&gt; 
+-deckList:ListView&lt;String&gt; 
+-rankNumColumn:TableColumn&lt;RankRow, Integer&gt;
+-nameColumn:TableColumn&lt;RankRow, String&gt; 
+-scoreColumn:TableColumn&lt;RankRow, Integer&gt;
+-listener:Listener
+--
++setLeaderBoard(List&lt;RankRow&gt;:leaderBoard):void
++fillListDeck(List&lt;String&gt;:listDeckName):void
+-goBackClicked(ActionEvent:e):void
++initialize(URL:url, ResourceBundle:resourceBundle):void
++setListener(Listener:listener):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>390</x>
+      <y>390</y>
+      <w>190</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+has the listener &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>560</x>
+      <y>330</y>
+      <w>320</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+Listener
+--
+
+--
+-onGoBack():void
+-downloadDeck(String:deckName):void
+-getRankDeck(String:deckName):void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>590</y>
+      <w>370</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>UploadDeckView     
+--
+-description:TextField 
+-listCard:ListView&lt;String&gt; 
+-listDeck:ListView&lt;String&gt;
+-scoreLabel:Label 
+-listener:Listener
+--
++initialize(URL:url, ResourceBundle:resourceBundle):void
+-goBack(ActionEvent:event):void
+-sendDeck(ActionEvent:event):void
+-sendScoreClicked(ActionEvent:e):void
++setListener(Listener:listener):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>390</x>
+      <y>670</y>
+      <w>190</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+has the listener &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>560</x>
+      <y>620</y>
+      <w>320</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+Listener
+--
+
+--
+-sendSelectedDeck(String:deckName, String:description):void
+-movingBack():void
+-getCards(String:deckName):List&lt;String&gt;
+-getDeckNames():List&lt;String&gt;
+-onSendScore(String:deckName):void
+-getScore(String:currentDeckName):int</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

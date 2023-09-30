@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>171</x>
+      <y>36</y>
+      <w>414</w>
+      <h>549</h>
+    </coordinates>
+    <panel_attributes>Database
+--
+-databaseInstance Database
+-dbUser DatabaseUser 
+-dbCard DatabaseCard 
+-dbDeck DatabaseDeck 
+-dbDeckCard DatabaseDeckCard 
+-dbRanking DatabaseRanking 
+-serverMode boolean
+--
++getInstance(): Database 
++setServerMode(boolean value): void
++setDataBase(): void
++insertNewUser(String:nickname, String:password): void
++deleteUser(String:nickname): void 
++modifyUserPassword(String:nickname, String:newPassword):void
++getUser(String:nickname):User
++insertNewCard(Card:card):void
++getCard(String:cardTitle):Card
++existCard(String:title):void
++deleteCard(String:title):void
++insertNewDeck(Deck:deck):void
++getDeck(String:deckName):Deck
++changeDeckTags(String:deckName, String:newFormattedTags):void
++removeCardFromDeck(String:deckName, String:cardName):void
++insertCardIntoDeck(String:cardName, String:deckName):void
++removeDeck(String:deckToRemove):void
++getAllCardsFromDeck(String:deckName): List&lt;Card&gt; 
++getAllDecks(): List&lt;Card&gt; 
++isLoginValid(User:user):boolean
++updateAuthor(String:deckName, String:author):void
++updateDeckDescription(String:deckName, String:description):void
++getAuthorFromDeck(String:deckName):String
++getDescriptionFromDeck(String:deckName):String
++getScoreFromRanking(String:deckTitle, String:username):int
++deleteScoreFromRanking(String:deckTitle, String:username):void
++getRankingForDeck(String:deck):List&lt;RankRow&gt; 
++updateCardScore(String:cardTitle, int:score):void
++updateScore(String:deckTitle, String:username, int:score): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

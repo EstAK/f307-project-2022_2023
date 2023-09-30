@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="231.0"
+            prefWidth="383.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <VBox layoutX="223.0" layoutY="17.0" spacing="5.0">
+            <children>
+                <Button fx:id="addCardButton" mnemonicParsing="false" onAction="#addCard" prefHeight="25.0"
+                        prefWidth="146.0" text="Nouvelle carte"/>
+                <Button fx:id="removeCardButton" disable="true" mnemonicParsing="false"
+                        onAction="#removeCardFromDeck" prefHeight="25.0" prefWidth="146.0"
+                        text="Supprimer carte"/>
+                <Button fx:id="modifyCardButton" disable="true" mnemonicParsing="false" onAction="#modifyCard"
+                        prefHeight="25.0" prefWidth="147.0" text="Modifier carte"/>
+                <Separator orientation="VERTICAL" prefHeight="79.0" prefWidth="6.0"/>
+            </children>
+            <HBox alignment="CENTER">
+                <children>
+                    <Button fx:id="backButton" mnemonicParsing="false" onAction="#goBack" prefHeight="25.0"
+                            prefWidth="61.0" text="Retour"/>
+                </children>
+            </HBox>
+        </VBox>
+        <ListView fx:id="listCards" layoutX="14.0" layoutY="16.0" prefHeight="200.0" prefWidth="200.0"/>
+    </children>
+</AnchorPane>

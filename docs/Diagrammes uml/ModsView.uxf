@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>448</x>
+      <y>24</y>
+      <w>288</w>
+      <h>184</h>
+    </coordinates>
+    <panel_attributes>ScoreView 
+--
++TIME_MILLI:double
++TIME_SECONDS :int
+-quitLabel:Button
+-oldRecord:Label
+-scoreLabel:Label
+-timeMinuteLabel:Label
+-timeSecondLabel:Label
+-listener:Listener
+--
++onExit(ActionEvent:event):void
++initialize(URL:location, ResourceBundle:resources):void
++setListener(Listener:listener):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>832</x>
+      <y>64</y>
+      <w>256</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+Listener
+--
+
+--
+-getScore():int
+-getRecord():int
+-getTime():long
+-onExit():void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>728</x>
+      <y>104</y>
+      <w>120</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+has the listener &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;130.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>448</x>
+      <y>224</y>
+      <w>288</w>
+      <h>184</h>
+    </coordinates>
+    <panel_attributes>/CardView/
+--
+-flipCardButton:Button
+-cardSideLabel:Label
+-listener:Listener
+--
++setCardSideLabel(String:label):void
++setFlipCardButtonLabel(String:label):void
+#onExitClicked(ActionEvent:e):void
+#onFlipCardClicked(ActionEvent:e):void
+#onTextToSpeechClicked(ActionEvent:e):void
++setListener(Listener:listener):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>728</x>
+      <y>328</y>
+      <w>120</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+has the listener &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;130.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>832</x>
+      <y>280</y>
+      <w>256</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+Listener
+--
+
+--
+-onExitClicked(ActionEvent:e):void
+-onFlipCardClicked():void
+-void onTextToSpeechClicked(String:text):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>744</x>
+      <y>496</y>
+      <w>288</w>
+      <h>184</h>
+    </coordinates>
+    <panel_attributes>HoleCardView 
+--
+-TextField answerField:TextField
+-validateAnswerButton:Button
+-Button goNextButton:Button
+-messageLabel:Label
+-listener:Listener
+--
++showMessage(String:message):void
++setGoNextButtonVisibility(boolean:visible):void
++setAnswerFieldVisibility(boolean:visible):void
+-onValidateAnswerClicked(ActionEvent:e):void
+-onGoNextClicked(ActionEvent:e):void
++setListener(Listener:listener):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1128</x>
+      <y>528</y>
+      <w>256</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+Listener
+--
+
+--
+-onValidateAnswerClicked(String:answer):void
+-onGoNextClicked():void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1024</x>
+      <y>584</y>
+      <w>120</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+has the listener &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;130.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>392</x>
+      <y>656</y>
+      <w>288</w>
+      <h>312</h>
+    </coordinates>
+    <panel_attributes>MultiChoiceCardView  
+--
+-choiceButtons:TilePane 
+-directAnswerField:TextField 
+-validateDirectAnswerButton:Button
+-twoChoicesButton:Button
+-fourChoicesButton:Button
+-directAnswerButton:Button
+-goNextButton:Button
+-messageLabel:Label
+-listener:Listener
+--
++setChoicesButtonsLabel(List&lt;String&gt;:choices):void
++setDifficultyButtonsVisibility(boolean:visible):void
++setChoiceButtonsVisibility(boolean:visible):void
++setDirectAnswerFieldVisibility(boolean:visible):void
++showMessage(String:message):void
++setGoNextButtonVisibility(boolean:visible):void
+-onTwoChoicesClicked(ActionEvent:e):void
+-onFourChoicesClicked(ActionEvent:e):void
+-onDirectAnswerClicked(ActionEvent:e):void
+-onValidateDirectAnswerClicked(ActionEvent:e):void
+-onValidateChoice(String:choice):void
+-onGoNextClicked(ActionEvent:e):void
++setListener(Listener:listener):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>752</x>
+      <y>744</y>
+      <w>256</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+Listener
+--
+
+--
+-onValidateChoiceClicked(String:choice):void
+-onTwoChoicesClicked():void
+-onFourChoicesClicked():void
+-onDirectAnswerClicked():void
+-onGoNextClicked():void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>672</x>
+      <y>784</y>
+      <w>104</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+has the listener &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>448</y>
+      <w>288</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>StandardCardView  
+--
+
+-appreciationButtons:HBox 
+-listener:Listener
+--
++setAppreciationButtonsLabel(List&lt;String&gt;:appreciations):void
++setAppreciationButtonsVisibility(boolean:visible):void
+-onAppreciationClicked(ActionEvent:e):void
++setListener(Listener:listener):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>32</x>
+      <y>664</y>
+      <w>256</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+Listener
+--
+
+--
+-onAppreciationClicked(String:appreciation):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>136</x>
+      <y>568</y>
+      <w>112</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+has the listener &gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>576</x>
+      <y>400</y>
+      <w>320</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;380.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>520</x>
+      <y>400</y>
+      <w>24</w>
+      <h>272</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;320.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>144</x>
+      <y>400</y>
+      <w>368</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>440.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+</diagram>

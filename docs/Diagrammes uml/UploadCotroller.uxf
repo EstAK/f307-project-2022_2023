@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>290</y>
+      <w>330</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>DownloadDeckController
+--
+-stage: Stage 
+-listener: ScreenChanger 
+-client: Client 
+-deckHashMap: Map&lt;String, Deck&gt; 
+-downloadView: DownloadDeckView
+-leaderBoardView: LeaderBoardView
+--
++show(): void
++goBack(): void
++downloadDeck(String:deckName): void
++getCardTitles(String:deckName): List&lt;String&gt;
++getAuthorFromDeck(String:deckName): String
++getDeckDescription(String:deckName): String
++onSeeLeaderBoard(String:deckName): void
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>710</x>
+      <y>300</y>
+      <w>410</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>UploadDeckController
+--
+-stage: Stage 
+-main: Main
+-client: Client
+-SCORE_NUL: int
+--
++show(): void
++sendSelectedDeck(String:deckName, String:description): void
++movingBack(): void
++getCards(String:deckName): List&lt;String&gt;
++getDeckNames(): List&lt;String&gt;
++onSendScore(String:deckName): void
++getScore(String currentDeckName): int
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>320</x>
+      <y>110</y>
+      <w>440</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>/Controller/
+--
+
+--
++runAsMainThread(Runnable:runnable): void
+/+show(): void/
+#&lt;T&gt;loadFXMLView(T:viewController, String:fxml, Stage:stage) : void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>140</x>
+      <y>200</y>
+      <w>370</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>350.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>540</x>
+      <y>200</y>
+      <w>300</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;280.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>360</x>
+      <y>290</y>
+      <w>330</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>LeaderBoardController
+--
+-stage Stage 
+-listener ScreenChanger 
+-client Client
+-deckHashMap Map&lt;String, Deck&gt;
+-leaderBoardView LeaderBoardView 
+--
++show(): void
++onGoBack(): void
++getRankDeck(String:deckName): void
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>500</x>
+      <y>200</y>
+      <w>30</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+</diagram>

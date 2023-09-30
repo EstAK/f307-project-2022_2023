@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="log_button" layoutX="189.0" layoutY="126.0" mnemonicParsing="false" onAction="#login" prefHeight="50.0" prefWidth="221.0" text="Se Connecter" />
+      <Button fx:id="register_button" layoutX="189.0" layoutY="229.0" mnemonicParsing="false" onAction="#register" prefHeight="50.0" prefWidth="222.0" text="S'enregistrer" />
+      <Label layoutX="87.0" layoutY="28.0" prefHeight="46.0" prefWidth="425.0" text="Bienvenue sur Flashcard games">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

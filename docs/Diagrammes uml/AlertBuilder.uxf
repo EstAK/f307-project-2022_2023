@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>270</x>
+      <y>150</y>
+      <w>310</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>AlertBuilder        
+--
+-alert:Alert
+--
++warning():AlertBuilder 
++error():AlertBuilder
++addHeader(String:header):AlertBuilder 
++addContent(String:content):AlertBuilder 
++addStackTrace(String:stackTrace):AlertBuilder
++addStackTrace(Exception:e):AlertBuilder
++addException(Exception:e):AlertBuilder
++build():Alert
++show():void</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

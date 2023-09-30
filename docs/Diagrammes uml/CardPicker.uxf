@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>310</x>
+      <y>90</y>
+      <w>210</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>/CardPicker/
+--
+#allCards:List&lt;Card&gt;
+--
+/+pick():Card/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>80</x>
+      <y>250</y>
+      <w>280</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>FreeCardPicker
+--
+-indexCurrentCard:int
+-timerBegin:long
+-timeTaken:long
+-numberOfGoodAnswers:int
+-deckName:String
+-TIME_FACTOR: int
+--
++pick():Card
++getNameOfDeck():String
++getScore():int
++increaseNumberOfGoodAnswers():void
++getNumberOfGoodAnswers():int
++getTime():long
++haveCards():boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>420</x>
+      <y>240</y>
+      <w>300</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>ScoreBasedCardPicker
+--
+-COOL_DOWN_PICK:int
+-FREQ_MIN:int
+-maxPicked:int
+-MINIMUM_COOLDOWN:int
+-MINIMUM_FREQUENCE:int
+-COOLDOWN_DIVISOR:int
+-FREQUENCE_DIVISOR:int
+--
++pickRandom(List&lt;Card&gt;:allCards):card
++getPossibleCards():List&lt;Card&gt;
++pick():Card
++getMaxPicked():int
++setMaxPicked(int:maxPicked):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>190</x>
+      <y>170</y>
+      <w>220</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>200.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>390</x>
+      <y>170</y>
+      <w>180</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;160.0;70.0</additional_attributes>
+  </element>
+</diagram>

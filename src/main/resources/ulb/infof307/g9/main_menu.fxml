@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="change_password_button1" layoutX="194.0" layoutY="34.0" mnemonicParsing="false" onAction="#goToDeckModification" prefHeight="43.0" prefWidth="214.0" text="Editer les paquets" />
+      <Button fx:id="changePasswordButton" layoutX="194.0" layoutY="90.0" mnemonicParsing="false" onAction="#changePassword" prefHeight="43.0" prefWidth="214.0" text="Changer le mot de passe" />
+      <Button fx:id="sendPacketMenuButton" layoutX="194.0" layoutY="147.0" mnemonicParsing="false" onAction="#uploadPacketButton" prefHeight="43.0" prefWidth="214.0" text="Partager vos paquets" />
+      <Button layoutX="193.0" layoutY="204.0" mnemonicParsing="false" onAction="#downloadButtonClicked" prefHeight="43.0" prefWidth="214.0" text="Télecharger des paquets" />
+      <Button layoutX="193.0" layoutY="259.0" mnemonicParsing="false" onAction="#leaderBoardButtonClicked" prefHeight="43.0" prefWidth="214.0" text="Classement" />
+      <Button fx:id="deconnectButton" layoutX="163.0" layoutY="328.0" mnemonicParsing="false" onAction="#disconnect" prefHeight="36.0" prefWidth="274.0" text="Deconnexion" />
+   </children>
+</AnchorPane>

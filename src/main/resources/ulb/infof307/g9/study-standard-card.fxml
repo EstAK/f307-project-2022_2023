@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="YELLOW" height="79.0" layoutX="210.0" layoutY="66.0" stroke="BLACK" strokeType="INSIDE" width="162.0" />
+      <Label fx:id="cardSideLabel" layoutX="240.0" layoutY="97.0" text="Question/Réponse" />
+      <Button fx:id="flipCardButton" layoutX="30.0" layoutY="93.0" mnemonicParsing="false" onAction="#onFlipCardClicked" text="Voir réponse" />
+      
+      <Button layoutX="474.0" layoutY="93.0" mnemonicParsing="false" onAction="#onExitClicked" text="Quitter" />
+      <Button layoutX="229.0" layoutY="162.0" mnemonicParsing="false" onAction="#onTextToSpeechClicked" prefHeight="26.0" prefWidth="123.0" text="Lecture vocale" />
+      <HBox fx:id="appreciationButtons" alignment="CENTER" layoutX="100.0" layoutY="300.0" spacing="16.0" />
+   </children>
+</AnchorPane>

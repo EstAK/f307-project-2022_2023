@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>45</x>
+      <y>243</y>
+      <w>369</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>EditCardController 
+--
+-deckName:String
+-stage:Stage
+-listener:ScreenChanger
+-card:Card
+-editCardView:EditCardView
+
+--
++show():void
++registerCard(String:title, String:question, String:answer):void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>603</x>
+      <y>486</y>
+      <w>369</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>EditHoleCardController
+--
+-deckName:String
+-stage:Stage
+-screenCganger:ScreenChanger
+-card:Card 
+--
++show():void
++registerCard(String:title, String:question, String:answer):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>693</x>
+      <y>243</y>
+      <w>612</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>EditMultiChoiceCardController
+--
+-deckName:String
+-stage:Stage
+-listener:ScreenChanger
+-card:MultiChoiceCard 
+-editMultiChoiceCardView:EditMultiChoiceCardView
+--
++show():void
++void registerCard(String:title, String:question, String:answer, String:fake1, String:fake2, String:fake3):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>225</x>
+      <y>477</y>
+      <w>216</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>SelectCardTypeController
+--
+-deckName:String
+-stage:Stage
+-screenChanger:ScreenChanger
+
+--
++show():void
++createMultiChoiceCard():void
++createStandardCard():void
++createHoleQuestion():void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>369</x>
+      <y>72</y>
+      <w>396</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>/Controller/
+--
+
+--
++runAsMainThread(Runnable:runnable): void
+/+show(): void/
+#&lt;T&gt;loadFXMLView(T:viewController, String:fxml, Stage:stage) : void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>216</x>
+      <y>153</y>
+      <w>315</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>330.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>540</x>
+      <y>153</y>
+      <w>396</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;420.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>432</x>
+      <y>153</y>
+      <w>108</w>
+      <h>351</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>100.0;10.0;10.0;370.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>531</x>
+      <y>153</y>
+      <w>153</w>
+      <h>351</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;150.0;370.0</additional_attributes>
+  </element>
+</diagram>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>280</x>
+      <y>260</y>
+      <w>530</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes>Modular
+--
+-questionPattern:Pattern 
+-answerPattern:Pattern
+-variablePattern:Pattern
+-variables:List&lt;String&gt; 
+-variablesValues:Map&lt;String, Integer&gt;
+-card:Card
+-random:Random
+--
++randomize(Random:random):Card
++getStringWithNumbers(String:stringToEdit, String:variableToReplace):String
++randomizeValues(Random:random):void
++isFullyModular(String:question, String:answer):boolean
++calculate(String[]:elements):String
++infixToPostfix(String[]:elements):ArrayList&lt;String&gt; 
++doMath(String:operator, int:operand1, int:operand2):Integer
++visit(HoleCard:holeCard):void
++visit(StandardCard:standardCard):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>280</x>
+      <y>70</y>
+      <w>530</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+CardVisitor 
+--
+
+--
++visit(HoleCard:holeCard):void
++visit(MultiChoiceCard:multiChoiceCard):void
++visit(StandardCard:standardCard):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>530</x>
+      <y>180</y>
+      <w>30</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+</diagram>

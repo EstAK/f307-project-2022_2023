@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="398.0" prefWidth="446.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER" layoutX="234.0" layoutY="360.0" spacing="5.0">
+         <children>
+            <Button fx:id="backButton" mnemonicParsing="false" onAction="#goBack" text="Retour" />
+            <Button fx:id="studyButton" mnemonicParsing="false" onAction="#goStudy" text="Etudier" />
+            <Button mnemonicParsing="false" onAction="#goFreeMod" text="Mode Libre" />
+         </children>
+      </HBox>
+
+      <HBox layoutX="23.0" layoutY="21.0" prefHeight="334.0" prefWidth="412.0">
+         <children>
+            <VBox spacing="5.0">
+               <children>
+                  <HBox prefHeight="26.0" prefWidth="200.0" spacing="5.0">
+                     <children>
+                        <TextField fx:id="tagSearch" promptText="tags" />
+                        <Button fx:id="searchTagButton" mnemonicParsing="false" onAction="#searchTag" text="Go" />
+                     </children>
+                  </HBox>
+                  <ListView fx:id="listDeck" prefHeight="294.0" prefWidth="200.0" />
+               </children>
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </VBox>
+            <VBox prefHeight="307.0" prefWidth="204.0" spacing="5.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Liste des tags :">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Text>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="103.0" spacing="2.0">
+                     <children>
+                        <TextField fx:id="newTagTextField" prefHeight="25.0" prefWidth="132.0" promptText="nouveau tag" />
+                        <Button fx:id="addTagButton" mnemonicParsing="false" onAction="#addNewTag" prefHeight="26.0" prefWidth="32.0" text="+" />
+                        <Button fx:id="removeTagButton" mnemonicParsing="false" onAction="#removeTag" prefHeight="26.0" prefWidth="33.0" text="-" />
+                     </children>
+                  </HBox>
+                  <ListView fx:id="listTags" editable="true" onEditCommit="#addNewTagFromList" prefHeight="172.0" prefWidth="199.0" />
+                  <Button fx:id="newDeckButton" mnemonicParsing="false" onAction="#addDeck" prefHeight="26.0" prefWidth="200.0" text="Nouveau paquet">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="unselectDeckButton" disable="true" mnemonicParsing="false" onAction="#onUnselectClick" prefHeight="25.0" prefWidth="200.0" text="Désélectionner" />
+                  <Button fx:id="removeDeckButton" disable="true" mnemonicParsing="false" onAction="#removeDeck" prefHeight="26.0" prefWidth="202.0" text="Supprimer paquet" />
+               </children>
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets top="9.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox layoutX="23.0" layoutY="359.0" prefHeight="26.0" prefWidth="124.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#importClick" text="Importer" />
+            <Button mnemonicParsing="false" onAction="#exportClick" text="Exporter" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

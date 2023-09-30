@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>99</x>
+      <y>0</y>
+      <w>369</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>EditContentDeckView    
+--
+-addCardButton:Button
+-backButton:Button
+-modifyCardButton:Button
+-listCards:ListView&lt;String&gt;
+-removeCardButton:Button
+-listener:Listener
+--
+-addCard(ActionEvent:event):void
+-modifyCard(ActionEvent:event):void
+-removeCardFromDeck(ActionEvent:event):void
+-initialize(URL:url, ResourceBundle:resourceBundle):void
+-goBack(ActionEvent:event):void
++setListener(Listener:listener):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>585</x>
+      <y>18</y>
+      <w>234</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+Listener
+--
+
+--
+-addCard():void
+-modifyCard(String:title):void
+-goBack():void
+-removeCardFromDeck(String:cardToDelete):void
+-getCardNames():List&lt;String&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>459</x>
+      <y>81</y>
+      <w>144</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+has the listener &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;140.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>99</x>
+      <y>243</y>
+      <w>369</w>
+      <h>495</h>
+    </coordinates>
+    <panel_attributes>EditDeckView     
+--
++DIFFICULTY:int
+-addTagButton:Button
+-backButton:Button
+-newDeckButton:Button
+-listDeck:ListView&lt;String&gt;
+-listTags:ListView&lt;String&gt;
+-removeDeckButton:Button
+-removeTagButton:Button
+-searchTagButton:Button
+-studyButton:Button
+-listener:Listener
+-newTagTextField:TextField
+-tagSearch:TextField
+-unselectDeckButton:Button
+--
+-addDeck(ActionEvent:event):void
+-addNewTag(ActionEvent:event):void
+-addNewTagFromList(ActionEvent:event):void
+-exportClick(ActionEvent:event):void
+-goBack(ActionEvent:event):void
+-goFreeMod(ActionEvent:event):void
+-addToListDeck(String:deckName):void
+-addToListDeck(List&lt;String&gt;:filteredDeckNames):void
+-goStudy(ActionEvent:event):void
+-importClick(ActionEvent:event):void
+-onUnselectClick(ActionEvent:event):void
+-removeDeck(ActionEvent:event):void
+-removeTag(ActionEvent:event):void
+-searchTag(ActionEvent:event):void
+-clearSelectionFromALl():void
+-initialize(URL:url, ResourceBundle:resourceBundle):void
++setListener(Listener:listener):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>594</x>
+      <y>315</y>
+      <w>288</w>
+      <h>297</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+Listener
+--
+
+--
+-addDeck(String:newDeckName):boolean
+-addNewTag(String:newTag):void
+-goBack():void
+-goDeckContent(String:deckName):void
+-goStudy(String:deckName, int:difficulty):void
+-goFreeMod(String:deckName, int:difficulty):void
+-removeDeck():String
+-removeTag(String:tagToRemove):void
+-searchTag(String:tagToSearch):void
+-updateCurrentDeckController(String:currentDeckName):void
+-getDeckNames():List&lt;String&gt; 
+-getTags():List&lt;String&gt;
+-importDeck():void
+-exportDeck(String:deckName):void
+-unselectDeck():void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>459</x>
+      <y>387</y>
+      <w>153</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+has the listener &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;150.0;20.0</additional_attributes>
+  </element>
+</diagram>

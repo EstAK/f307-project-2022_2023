@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>190</y>
+      <w>290</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>EditPasswordView      
+--
+
+-newPassword:TextField 
+-listener:Listener
+--
+-changePassword(ActionEvent:event):void
+-returnMainMenu(ActionEvent:event):void
++setListener(Listener:listener):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>550</x>
+      <y>190</y>
+      <w>320</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+Listener
+--
+
+--
+-changePassword(String:newPassword):void
+-returnMainMenu():void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>320</x>
+      <y>240</y>
+      <w>250</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+has the listener &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;230.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>380</y>
+      <w>290</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>LogMenuView       
+--
+-errorLabel:Label
+-username:TextField   
+-password:PasswordField   
+-listener:Listener
+--
+-confirmLog(ActionEvent:event):void
++changeErrorLabel(String:text):void
+-returnFirstMenu(ActionEvent:event):void
++setListener(Listener:listener):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>550</x>
+      <y>390</y>
+      <w>350</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+Listener
+--
+
+--
+-returnFirstMenu():void
+-confirmLog(String username, String password):void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>320</x>
+      <y>440</y>
+      <w>250</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+has the listener &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;230.0;20.0</additional_attributes>
+  </element>
+</diagram>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>220</y>
+      <w>330</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>EditContentDeckController
+--
+-deckName: String 
+-main: Main 
+-stage: Stage
+--
++addCard(): void
++modifyCard(String title): void
++goBack(): void
++getCardNames(): List&lt;String&gt;
++removeCard(String:cardToDelete): void
++show():void
++visit(HoleCard:holeCard): void
++visit(MultiChoiceCard:multiChoiceCard): void
++visit(StandardCard:standardCard): void
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>420</x>
+      <y>210</y>
+      <w>420</w>
+      <h>410</h>
+    </coordinates>
+    <panel_attributes>EditDeckController
+--
+-stage: Stage
+-main: Main 
+-deckMap: Map&lt;String, Deck&gt; 
+-editDeckView: EditDeckView 
+-currentDeck: Deck 
+--
++show(): void
++addDeck(String:newDeckName): boolean
++addNewTag(String:newTag): void
++goBack(): void
++goStudy(String:deckName, int:difficulty): void
++goFreeMod(String:deckName, int:difficulty): void
++removeCard(String:cardToDelete): void
++chooseFile(): String
++importDeck(): void
++exportDeck(String:deckName): void
++removeDeck(): String
++removeTag(String:tagToRemove): void
++searchTag(String tagToSearch): void
++updateCurrentDeckController(String deckName): void
++unselectDeck(): void
++getDeckNames(): List&lt;String&gt;
++getTags(): List&lt;String&gt;
++goDeckContent(String:deckName): void
+
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>260</x>
+      <y>40</y>
+      <w>440</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>/Controller/
+--
+
+--
++runAsMainThread(Runnable:runnable): void
+/+show(): void/
+#&lt;T&gt;loadFXMLView(T:viewController, String:fxml, Stage:stage) : void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>190</x>
+      <y>130</y>
+      <w>210</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>190.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>520</x>
+      <y>130</y>
+      <w>60</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;40.0;80.0</additional_attributes>
+  </element>
+</diagram>

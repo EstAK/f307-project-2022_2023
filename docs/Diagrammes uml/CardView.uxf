@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>8</x>
+      <y>0</y>
+      <w>320</w>
+      <h>184</h>
+    </coordinates>
+    <panel_attributes>EditCardView 
+--
+-titleField:TextField
+-questionField:TextField
+-answerField:TextField
+-isModular:CheckBox
+-card Card;
+-listener:Listener
+--
++setCard(Card:card):void
+-registerCard(ActionEvent:event):void
++isModularChecked():boolean
++setListener(Listener:listener):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>432</x>
+      <y>48</y>
+      <w>328</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt; 
+Listener
+--
+
+--
+-registerCard(String:title, String:question, String:answer):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>320</x>
+      <y>80</y>
+      <w>128</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+has the interface &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;140.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>8</x>
+      <y>200</y>
+      <w>320</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>EditHoleCardView  
+--
+-titleField:TextField
+-questionField:TextField
+-answerField:TextField
+-isModular:CheckBox
+-card Card;
+-listener:Listener
+--
++setCard(Card:card):void
+-registerCard(ActionEvent:event):void
++setListener(Listener:listener):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>432</x>
+      <y>248</y>
+      <w>328</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt; 
+Listener
+--
+
+--
+-registerCard(String:title, String:question, String:answer):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>320</x>
+      <y>280</y>
+      <w>128</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+has the interface &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;140.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>8</x>
+      <y>384</y>
+      <w>320</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>EditMultiChoiceCardView   
+--
+-fieldTitle:TextField
+-fieldQuestion:TextField
+-fieldAnswer:TextField
+-fieldFake1:TextField
+-fieldFake2:TextField
+-fieldFake3:TextField
+-isModular:CheckBox
+-listener:Listener
+--
+-registerCard(ActionEvent:event):void
++setCard(Card:card):void
++isModular():boolean
++setListener(Listener:listener):void
++disableFakes(boolean:disable)
++initialize(URL:url, ResourceBundle:resourceBundle)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>440</y>
+      <w>328</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+Listener
+--
+
+--
+-registerCard(String:title, String:question, String:answer, String:fake1, String:fake2, String:fake3, boolean:isModular):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>320</x>
+      <y>480</y>
+      <w>136</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+has the interface &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;150.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>8</x>
+      <y>616</y>
+      <w>320</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>SelectCardTypeView   
+--
+-listener:Listener
+--
+-CreateStandardCard(MouseEvent:event):void
+-CreateChoiceCard(MouseEvent:event):void
+-createHoleQuestion(MouseEvent:event):void
++setListener(Listener:listener):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>432</x>
+      <y>616</y>
+      <w>328</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+Listener
+--
+
+--
+-CreateStandardCard():void
+-CreateChoiceCard():void
+-createHoleQuestion():void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>320</x>
+      <y>656</y>
+      <w>128</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+has the interface &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;140.0;20.0</additional_attributes>
+  </element>
+</diagram>

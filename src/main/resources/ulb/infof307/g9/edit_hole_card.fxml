@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField fx:id="questionField" layoutX="136.0" layoutY="161.0" prefHeight="38.0" prefWidth="328.0" />
+      <TextField fx:id="answerField" layoutX="136.0" layoutY="244.0" prefHeight="38.0" prefWidth="328.0" />
+      <Button layoutX="241.0" layoutY="313.0" mnemonicParsing="false" onAction="#registerCard" prefHeight="26.0" prefWidth="140.0" text="Enregistrer" />
+      <Label layoutX="136.0" layoutY="134.0" prefHeight="18.0" prefWidth="328.0" text="Écrivez votre nouvelle question à trou" />
+      <Label layoutX="136.0" layoutY="214.0" prefHeight="18.0" prefWidth="328.0" text="Écrivez la réponse correspondant au trou" />
+      <TextField fx:id="titleField" layoutX="136.0" layoutY="89.0" prefHeight="38.0" prefWidth="328.0" />
+      <Label layoutX="136.0" layoutY="61.0" prefHeight="18.0" prefWidth="328.0" text="Veuillez insérer le nom de la carte" />
+      <Text layoutX="79.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="exemple -&gt; question : Leopold was the king of Belgium et réponse : Belgium " wrappingWidth="464.484375" />
+   </children>
+</AnchorPane>

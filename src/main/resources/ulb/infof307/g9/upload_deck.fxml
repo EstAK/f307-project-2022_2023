@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="570.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="buttonBack" layoutX="30.0" layoutY="408.0" mnemonicParsing="false" onAction="#goBack" text="Retour" />
+      <Button fx:id="buttonSend" layoutX="440.0" layoutY="408.0" mnemonicParsing="false" onAction="#sendDeck" text="Envoyer" />
+      <ListView fx:id="listDeck" layoutX="35.0" layoutY="58.0" prefHeight="200.0" prefWidth="235.0" />
+      <ListView fx:id="listCard" layoutX="301.0" layoutY="58.0" prefHeight="314.0" prefWidth="235.0" />
+      <Label layoutX="35.0" layoutY="25.0" text="Sélectionnez le deck" />
+      <Label layoutX="309.0" layoutY="25.0" text="Cartes :" />
+      <TextField fx:id="description" layoutX="32.0" layoutY="296.0" prefHeight="71.0" prefWidth="235.0" />
+      <Label layoutX="32.0" layoutY="258.0" prefHeight="38.0" prefWidth="70.0" text="Description" />
+      <Button layoutX="317.0" layoutY="408.0" mnemonicParsing="false" onAction="#sendScoreClicked" text="Envoyer le score" />
+      <HBox layoutX="30.0" layoutY="383.0">
+         <children>
+            <Label text="Score:" />
+            <Label fx:id="scoreLabel" prefHeight="17.0" prefWidth="228.0" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

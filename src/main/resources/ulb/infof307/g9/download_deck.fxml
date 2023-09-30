@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="445.0" prefWidth="492.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ListView fx:id="listDeck" layoutX="27.0" layoutY="51.0" prefHeight="230.0" prefWidth="224.0" />
+      <ListView fx:id="listCard" layoutX="290.0" layoutY="50.0" prefHeight="230.0" prefWidth="176.0" />
+      <Label layoutX="27.0" layoutY="22.0" text="Auteur : " />
+      <Label fx:id="nameAuthor" layoutX="85.0" layoutY="22.0" text="placeHolder" />
+      <Button fx:id="backButton" layoutX="27.0" layoutY="398.0" mnemonicParsing="false" onAction="#backClicked" text="Retour" />
+      <HBox alignment="CENTER_LEFT" layoutX="27.0" layoutY="273.0" prefHeight="59.0" prefWidth="200.0">
+         <children>
+            <Label text="Description:" />
+         </children>
+      </HBox>
+      <VBox layoutX="322.0" layoutY="307.0" spacing="5.0" />
+      <Button fx:id="downloadButton" layoutX="355.0" layoutY="398.0" mnemonicParsing="false" onAction="#downloadButtonClicked" prefHeight="25.0" prefWidth="111.0" text="Télécharger" />
+      <TextArea fx:id="descriptionBox" layoutX="27.0" layoutY="314.0" prefHeight="70.0" prefWidth="443.0" />
+   </children>
+</AnchorPane>

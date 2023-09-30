@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>6</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>384</x>
+      <y>114</y>
+      <w>222</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>DatabaseConnection
+--
+-connection : Connection
+--
++startConnection(bool:serverMode) : Connection
+-createDatabaseIfNoExists(boolean:serverMode): void
++getServerDatabase(String:osName): String
++getLocalDatabase(String:osName): String
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>138</x>
+      <y>216</y>
+      <w>222</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes>DatabaseCard
+--
+-serverMode : boolean
+--
++insertNewCard(Card:card) : void
++getCard(String:cardTitle) : Card
++cardExists(String:title) : void
++deleteCard(String:title) : void
++updateCard(Card:card) : void
++updateCardScore(String:cardTitle, int:score) : void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>72</x>
+      <y>414</y>
+      <w>402</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>DatabaseDeck
+--
+-serverMode : boolean
+--
++insertNewDeck(Deck:deck, DatabaseDeckCard:databaseDeckCard, DatabaseCard:databaseCard): void
++getDeck(String:deckName, DatabaseDeckCard:dbDeckCard, DatabaseCard:dbCard): Deck
++getTagsFromDeck(String:deckName): List&lt;String&gt;
++deckExists(String:deckName): void
++changeDeckTags(String:deckName, String:newFormattedTags): void
++changeDeckName(String:oldDeckName, String:newDeckName): void
++updateAuthor(String:deckName, String:author): void
++updateDescription(String:deckName, String:description) : void
++getAuthorFromDeck(String:deckName) : String
++getDescriptionFromDeck(String:deckName) : String
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>480</x>
+      <y>414</y>
+      <w>540</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>DatabaseDeckCard
+--
+-serverMode : boolean
+--
++removeCardFromDeck(String:deckName, String:cardName, DatabaseCard:dbCard, DatabaseDeck:dbDeck) : void
++cardLinkToDeckExists(String:cardTitle, String:deckName, DatabaseCard:databaseCard, DatabaseDeck:databaseDeck) : void
++insertCardIntoDeck(String:cardName, String:deckName, DatabaseCard:dbCard, DatabaseDeck:dbDeck): void
++insertListOfCardsIntoDeck(List&lt;Card&gt;:cards, String:deckName, DatabaseCard:databaseCard, DatabaseDeck:databaseDeck) : void
++removeDeck(String:deckToRemove, DatabaseDeck:dbDeck, DatabaseCard dbCard):void
++getAllCardsFromDeck(String;deckName, DatabaseCard:dbCard) : List&lt;Card&gt;
++getAllDecks(DatabaseCard:dbCard, DatabaseDeck:dbDeck) : List&lt;Deck&gt;
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>234</x>
+      <y>180</y>
+      <w>258</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>410.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>264</x>
+      <y>180</y>
+      <w>234</w>
+      <h>246</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>370.0;10.0;10.0;390.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>624</x>
+      <y>192</y>
+      <w>312</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes>DatabaseRanking
+--
+-serverMode : boolean
+--
++insertNewScore(String:deckTitle, String:username, int:score): void
++getScore(String deckTitle, String username): int
++scoreExists(String:deckTitle, String:username): void
++deleteScore(String:deckTitle, String:username): void 
++updateScore(String:deckTitle, String:username, int score):void
++getRankingForDeck(String:deck): List&lt;RankRow&gt; 
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>180</y>
+      <w>54</w>
+      <h>246</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;390.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>180</y>
+      <w>156</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;240.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>582</x>
+      <y>306</y>
+      <w>312</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes>DatabaseUser
+--
+-serverMode : boolean
+--
++insertNewUser(String:username, String:password):void
++userExists(String:username):void
++deleteUser(String:username):void
++modifyUserPassword(String:username, String:newPassword):void
++getUser(String:username):User
++isLoginValid(User:user):boolean
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>486</x>
+      <y>180</y>
+      <w>114</w>
+      <h>138</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;210.0</additional_attributes>
+  </element>
+</diagram>

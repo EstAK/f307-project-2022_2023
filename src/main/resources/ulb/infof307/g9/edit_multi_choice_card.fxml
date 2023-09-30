@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="136.0" layoutY="89.0" prefHeight="18.0" prefWidth="328.0" text="Écrivez votre nouvelle question" />
+      <Label layoutX="136.0" layoutY="166.0" prefHeight="18.0" prefWidth="328.0" text="Écrivez la réponse correspondante" />
+      <Label layoutX="136.0" layoutY="14.0" prefHeight="18.0" prefWidth="328.0" text="Veuillez insérer le nom de la carte" />
+      <Label layoutX="218.0" layoutY="245.0" prefHeight="18.0" prefWidth="162.0" text="Entrez les mauvaises réponses" />
+      <TextField fx:id="fieldTitle" layoutX="136.0" layoutY="42.0" prefHeight="38.0" prefWidth="328.0" />
+      <TextField fx:id="fieldQuestion" layoutX="136.0" layoutY="116.0" prefHeight="38.0" prefWidth="328.0" />
+      <TextField fx:id="fieldAnswer" layoutX="136.0" layoutY="196.0" prefHeight="38.0" prefWidth="328.0" />
+      <TextField fx:id="fieldFake1" layoutX="14.0" layoutY="270.0" prefHeight="38.0" prefWidth="162.0" />
+      <TextField fx:id="fieldFake2" layoutX="218.0" layoutY="270.0" prefHeight="38.0" prefWidth="162.0" />
+      <TextField fx:id="fieldFake3" layoutX="423.0" layoutY="270.0" prefHeight="38.0" prefWidth="162.0" />
+      <CheckBox fx:id="isModular" layoutX="134.0" layoutY="363.0" mnemonicParsing="false" text="Modulaire" />
+      <Button layoutX="229.0" layoutY="359.0" mnemonicParsing="false" onAction="#registerCard" prefHeight="26.0" prefWidth="140.0" text="Enregistrer" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>476</x>
+      <y>280</y>
+      <w>301</w>
+      <h>203</h>
+    </coordinates>
+    <panel_attributes>Client  
+--
++PORT:int
+-client:Socket
+-bufferedReader:BufferedReader
+-bufferedWriter:BufferedWriter
+-onEventListener:OnEventListener 
+--
+-listen():void
++sendMessage(String:message):void
++sendPacket(Packet:packet):void
++sendScore(String:deckName,int:score,User:user):void
++getLeaderBoard(String:deckName):void
++getAllDecks():void
++login(User:user):void
++register(User:user):void
++exportDeck(Deck:deck):void
++changePassword(User:user):void
++terminate():void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>546</x>
+      <y>616</y>
+      <w>224</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+OnEventListener 
+--
+
+--
+-onFailEvent():void
+-onOkEvent():void
+-onSendAllDecksEvent(List&lt;Deck&gt;:decks):void
+-onGetRankingEvent(List&lt;RankRow&gt;:leaderboard):void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>644</x>
+      <y>476</y>
+      <w>98</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+has the listener &gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;200.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>476</x>
+      <y>0</y>
+      <w>301</w>
+      <h>203</h>
+    </coordinates>
+    <panel_attributes>ClientHandler   
+--
++clients:List&lt;ClientHandler&gt;
++bufferedReader:BufferedReader
++bufferedWriter:BufferedWriter
++socketClient:Socket 
+--
+-sendMessage(String:message):void
+-sendPacket(Packet:packet):void
++packetToJson(Packet:packet):String
++run():void
+-onGetRankingEvent(Packet:packet):void
+-onChangePasswordEvent(Packet:packet):void
+-onExportDeckEvent(Packet:packet):void
+-onLoginEvent(Packet:packet):void
+-onScoreEvent(Packet:packet):void
+-onGetDecksEvent(Packet:packet):void
+-onRegisterEvent(Packet:packet):void
+-terminate():void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1491</x>
+      <y>287</y>
+      <w>301</w>
+      <h>259</h>
+    </coordinates>
+    <panel_attributes>Packet    
+--
+-user:User 
+-deckName:String 
+-type:Type
+-decks:List&lt;Deck&gt;
+-sentDeck:Deck 
+-score:int
+-leaderboard:List&lt;RankRow&gt;
+--
++getType():Type
++setType(Type:type):void
++getDecks():List&lt;Deck&gt;
++setDecks(List&lt;Deck&gt;:decks):void
++getSentDeck():Deck
++setSentDeck(Deck:sentDeck):void
++getDeckName():void
++setDeckName(String:deckName):void
++getUser():User
++setUser(User:user):void
++setScore(int:newScore):void
++getScore():int
++getLeaderboard():List&lt;RankRow&gt;
++setLeaderboard(List&lt;RankRow&gt;:leaderboard):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1092</x>
+      <y>420</y>
+      <w>301</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>PacketBuilder     
+--
+-packet:Packet 
+--
++build():Packet 
++setDeckToSend(Deck:deck):PacketBuilder  
++setDecks(List&lt;Deck&gt;:decks):PacketBuilder  
++setUser(User:user):PacketBuilder  
++setDeckName(String:deckName):PacketBuilder  
++setScore(int:score):PacketBuilder  
++setLeaderBoard(List&lt;RankRow&gt;:scores):PacketBuilder  </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1036</x>
+      <y>154</y>
+      <w>350</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>PacketDirector      
+--
+
+--
++buildPacketLogin(User:user):Packet 
++buildPacketRegister(User:user):Packet
++buildPacketGetDecks():Packet
++buildPacketOk():Packet
++buildPacketFail():Packet
++buildPacketExportDeck(Deck:deck):Packet
++buildPacketSendAllDecks(List&lt;Deck&gt;:decks):Packet
++buildPacketChangePassword(User:user):Packet
++buildPacketSendScore(String:deckName, int:score, User:user):Packet
++buildPacketGetLeaderBoard(String:deckName):Packet
++buildPacketSendLeaderBoard(List&lt;RankRow&gt;:leaderboard):Packet</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>14</y>
+      <w>364</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>Server      
+--
++PORT :int
+--
++main(String[]:args):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>357</x>
+      <y>77</y>
+      <w>133</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..n
+uses to handle clients &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>588</x>
+      <y>196</y>
+      <w>91</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+communicates &gt;</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>770</x>
+      <y>147</y>
+      <w>280</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+uses to send packet &gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;380.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>770</x>
+      <y>238</y>
+      <w>280</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+uses to send packet &gt;</panel_attributes>
+    <additional_attributes>10.0;160.0;380.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1190</x>
+      <y>315</y>
+      <w>126</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+uses to create packet &gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1386</x>
+      <y>469</y>
+      <w>119</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+creates &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;150.0;20.0</additional_attributes>
+  </element>
+</diagram>
