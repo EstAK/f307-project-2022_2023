@@ -7,7 +7,7 @@ This project was undertaken using the XP agile methodology within a team of 10 i
 1. A secure login system.
 2. A fully implemented card package management.
 3. Diversity of card types such as multiple choice, open response and blank text to complete.
-4. A system to import and export a card package on your computer.
+4. A system to import and export a card package in your computer.
 5. A store where you can download other players custom card packages and upload yours as well.
 6. Storage and data management in a database.
 7. Multiple Learning Modes: Our application supports various learning modes to cater to different learning styles and needs. These modes include:
@@ -61,7 +61,7 @@ Ce projet a été réalisé en utilisant la méthodologie agile XP au sein d'une
 1. Un système de connexion sécurisé.
 2. Une gestion complète des paquets de cartes.
 3. Divers types de cartes, tels que les questions à choix multiples, les réponses ouvertes et les espaces réservés pour compléter.
-4. Un système d'importation et d'exportation de paquets de cartes sur votre ordinateur.
+4. Un système d'importation et d'exportation de paquets de cartes dans votre ordinateur.
 5. Une boutique où vous pouvez télécharger les paquets de cartes personnalisés d'autres joueurs et télécharger les vôtres.
 6. Stockage et gestion des données dans une base de données.
 7. Modes d'apprentissage multiples : Notre application prend en charge différents modes d'apprentissage pour répondre à différents styles et besoins d'apprentissage. Ces modes comprennent :
