@@ -1,3 +1,36 @@
+# English Version
+# INFOF307 - Flashcard
+## Quick links
+- [Task assignments](team/tasksAssignments.md)
+- [Points per stories](team/updatedStories.md)
+- [Dependencies](lib/setup.md)
+- [Compilation steps](dist/compilation.md)
+## Setup
+> To setup project dependencies, see [this document](lib/setup.md)
+
+Since iteration 2 and the creation of the server, the application can no longer launch
+alone: ​​you must also launch the server application for this,
+1. Go to `Run -> Edit Configuration`
+2. Add an application that uses `Server.java` as its main class
+> It is possible to launch the server and the client in a single click by 
+> adding in a compound 
+## Using the jar
+If you use the pre-compiled `.jar` (for Windows), enter these commands in
+the terminal to launch the client and the server,
+```agsl
+java -jar /path/to/g9-iteration-4.jar 
+java -cp /path/to/g9-iteration-4.jar ulb.infof307.g9.server.Server
+```
+> Please note, the application will not work correctly if the server
+> is not launched. Because, since iteration 2, many actions have taken place
+> by the latter
+### Other OS
+You must [compile](dist/compilation.md) the `.jar` yourself. You will find it in
+`/target` under the name of `g9-iteration-2-shaded.jar`
+> Do not make the mistake of `.jar` because the unshaded version
+> **It won't work** 
+
+# French Version
 # INFOF307 - Flashcard
 ## Liens rapides
 - [Attributions des tâches](team/tasksAssignments.md)
